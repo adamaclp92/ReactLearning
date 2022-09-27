@@ -1,0 +1,53 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-div {
+    background-color: #f58071;
+    border-radius:  10px 10px 0px 0px;
+    color: white;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.header-divalt {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.header-img {
+    height: 10%;
+}
+
+.header-par {
+    padding-left: 10px;
+}
+
+.content-picture {
+    height: 150px;
+    width: 150px;
+    border-radius: 5%;
+    display: block;
+}
+
+
+
+.location-icon {
+    height: 20px;
+    padding-right: 5px;
+}
+
+.location {
+    padding-right: 20px;
+}
+
+.googleMapsUrl {
+    text-decoration: underline;
+    color: #b5bab6;
+}
+
+.row {
+    padding: 20px;
+}

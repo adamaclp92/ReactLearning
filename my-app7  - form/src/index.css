@@ -1,0 +1,29 @@
+body{
+    margin: 20px;
+}
+
+.form-control{
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.form-check {
+    margin: 20px;
+}
+
+.radioBut {
+    margin: 0px 10px;
+}
+
+
+
+.legend {
+    width:auto;
+    padding:0 10px;
+    border-bottom:none;
+}
+
+.select-div{
+    margin: 20px;
+}
