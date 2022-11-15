@@ -1,0 +1,15 @@
+.AddUser--card{
+    margin-top: 100px;
+}
+
+.AddUser--label{
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .AddUser--button {
+        width: auto;
+    }
+  }

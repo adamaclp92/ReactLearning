@@ -1,0 +1,13 @@
+
+.title{
+    font-weight: bold;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.input{
+    width: 3rem;
+    padding-left: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 5px;
+}

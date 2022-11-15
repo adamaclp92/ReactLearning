@@ -1,0 +1,16 @@
+.userItem--container {
+    height: 80px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.userItem--par{
+    border:2px solid rgb(202, 202, 202);
+    padding: 5px;
+    padding-left: 10px;
+    position: absolute;
+    top: 25%;
+    width: 95%;
+
+
+}

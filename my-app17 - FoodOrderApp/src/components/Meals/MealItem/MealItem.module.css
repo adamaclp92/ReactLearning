@@ -1,0 +1,13 @@
+.name{
+    font-weight: bold;
+}
+
+.description{
+    font-style: italic;
+}
+
+.price{
+    font-weight: bold;
+    color: rgb(175, 157, 55);
+}
+

@@ -1,0 +1,33 @@
+.card{
+    max-width: 80rem;
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.parent{
+    overflow: hidden;
+}
+
+.mealItem{
+    float: left;
+}
+
+.mealItemForm{
+    overflow: hidden;
+    max-width: 10rem;
+    width: 50%;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.hr{
+    margin-top: 8rem;
+}
+
+.loading {
+    text-align: center;
+    color: white;
+}

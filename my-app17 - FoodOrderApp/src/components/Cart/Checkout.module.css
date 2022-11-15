@@ -1,0 +1,84 @@
+.container{
+    height: 20rem;
+    overflow-y: scroll;
+}
+
+.control {
+    width: 45%;
+    display: inline-block;
+    margin-right:20px;
+    height: auto;
+    overflow: auto;
+    margin-left: 2rem;
+}
+
+
+.control input {
+    width: 100%;
+    padding: 5px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.control input:focus {
+    background-color: lightblue;
+}
+
+.control label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .invalid{
+      color: rgb(252, 78, 78);
+  }
+
+  .invalid input {
+      border: 1px solid rgb(255, 0, 0);
+      background-color: rgb(252, 190, 183);
+  }
+  
+  @media (min-width: 768px) {
+    .actions {
+      flex-direction: row;
+    }
+  }
+  
+    .actions button {
+      font: inherit;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #8a2b06;
+      padding:0.2rem 1rem;
+      border-radius: 6px;
+      margin-left: 1rem;
+    }
+    
+    .actions button:hover,
+    .actions button:active {
+      background-color: #5a1a01;
+      border-color: #5a1a01;
+      color: white;
+    }
+    
+    .actions .button--alt {
+      color: #8a2b06;
+      border-radius: 20px;
+   
+    }
+    
+    .actions .button {
+      background-color: #8a2b06;
+      color: white;
+      border-radius: 20px;
+  
+    }
