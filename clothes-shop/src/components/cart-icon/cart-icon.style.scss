@@ -1,0 +1,48 @@
+.cart-icon-container{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.4);
+    }
+
+    &.bump {
+        animation: bump 300ms ease-out;
+    }
+
+    @keyframes bump {
+        0% {
+            transform: scale(1);
+        }
+        10% {
+            transform: scale(0.9);
+        }
+        30% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .shopping-icon{
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .item-count{
+        position: absolute;
+        font-size: 20px;
+        font-weight: bold;
+        bottom: 20px;
+    }
+}

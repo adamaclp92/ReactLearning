@@ -1,0 +1,36 @@
+.area{
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.circle{
+    position: absolute;
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+}
+
+.project-button-container{
+
+    button{
+        background-color: rgb(71, 52, 180);
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        width: 100px;
+        cursor: pointer;
+        float: left;
+        color: white;
+
+        &:hover{
+            background-color: rgb(124, 175, 252);
+        }
+
+        &:disabled{
+            cursor:not-allowed;
+            background-color: grey;
+        }
+    }
+}
