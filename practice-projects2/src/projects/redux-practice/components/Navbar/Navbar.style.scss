@@ -1,0 +1,32 @@
+.nav-center{
+    background-color: cornflowerblue;
+    width: 100%;
+    padding: 0.8rem;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .shopping-icon{
+        width: 50px;
+        height: 20px;
+        position: absolute;
+    }
+
+    .total-amount{
+        font-size: small;
+        margin-top: 4px;
+    }   
+
+
+}
