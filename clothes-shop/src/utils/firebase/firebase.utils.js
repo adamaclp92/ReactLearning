@@ -88,7 +88,6 @@ export const postUser = async (userAuth, additionalInformation = {}) => {
     { method: "GET" }
   );
   const data = await response.json();
-
   const { email } = userAuth;
 
   let displayName;
@@ -145,6 +144,41 @@ export const postProducts = async (objects) =>{
     console.log("error creating the user", error.message);
   }
 }
+
+export const getCategories = async () => {
+  let array = [];
+  try {
+    const response = await fetch(
+      "https://clothesshop-d59b5-default-rtdb.firebaseio.com/products.json", 
+      { method: "GET" });
+
+      const data = await response.json();
+      //return data
+
+      for(let i in data){
+   
+        for(let y in data[i]){
+          /*if(data[i][y].title.toLowerCase() === title){
+            return data[i][y].items;
+          }*/
+          array.push(data[i][y])
+        }
+      }
+
+      const categoryMap = array.reduce((acc, actualArrayItem) => {
+        const { title, items } = actualArrayItem;
+        acc[title.toLowerCase()] = items;
+        return acc;
+      }, {})
+
+      return categoryMap;
+     
+  } catch (error) {
+    console.log("error ", error.message);
+  }
+}
+
+
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;

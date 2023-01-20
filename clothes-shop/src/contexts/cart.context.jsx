@@ -1,5 +1,48 @@
 import { createContext, useEffect, useState } from "react";
 
+export const CartContext = createContext({
+    isCartOpen: false,
+    setIsCartOpen: () =>{},
+    cartItems: [],
+    addItemToCart: () => {},
+    deleteItemFromCart: () => {},
+    clearItemFromCart: () => {},
+    cartItemCount: 0,
+    totalAmount: 0
+})
+
+export const CART_ACTION_TYPES = {
+    SET_IS_CART_OPEN: 'SET_IS_CART_OPEN',
+    SET_CART_ITEMS: 'SET_CART_ITEMS',
+    SET_CART_ITEM_COUNT: 'SET_CART_ITEM_COUNT',
+    SET_CART_TOTAL_AMOUNT: 'SET_CART_TOTAL_AMOUNT'
+}
+
+const INITIAL_STATE = {
+    isCartOpen: false,
+    cartItems: [],
+    cartItemCount: 0,
+    totalAmount: 0
+}
+
+const cartReducer = (state, action) => {
+    const {type, payload} = action;
+
+    switch(type) {
+        case CART_ACTION_TYPES.SET_IS_CART_OPEN:
+            return {}
+        case CART_ACTION_TYPES.SET_CART_ITEMS:
+            return {}
+        case CART_ACTION_TYPES.SET_CART_ITEM_COUNT:
+            return {}
+        case CART_ACTION_TYPES.SET_CART_TOTAL_AMOUNT:
+            return {}
+
+        default: 
+            throw new Error(`Unhandled type ${type} in cartReducer`)
+    }
+}
+
 export const addCartItem = (cartItems, productToAdd) => {
     const existingCartItem = cartItems.find(
         (cartItem) => cartItem.id === productToAdd.id
@@ -36,29 +79,10 @@ export const deleteCartItem = (cartItems, productToDelete) => {
 export const clearCartItem = (cartItems, productToDelete) => 
     cartItems.filter((cartItem) => cartItem.id !== productToDelete.id)
 
-
-export const CartContext = createContext({
-    isCartOpen: false,
-    setIsCartOpen: () =>{},
-
-    cartItems: [],
-    addItemToCart: () => {},
-    deleteItemFromCart: () => {},
-
-    clearItemFromCart: () => {},
-
-    cartItemCount: 0,
-
-    totalAmount: 0
-})
-
 export const CartProvider = ({children}) =>{
     const [isCartOpen, setIsCartOpen] = useState(false)
-
     const [cartItems, setCartItems] = useState([])
-
     const [cartItemCount, setCartItemCount] = useState(0)
-
     const [totalAmount, setTotalAmount] = useState(0)
 
     useEffect(() => {
@@ -87,3 +111,4 @@ export const CartProvider = ({children}) =>{
     const value = {isCartOpen, setIsCartOpen, cartItems, addItemToCart, deleteItemFromCart, clearItemFromCart, cartItemCount, totalAmount}
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
+
