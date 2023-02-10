@@ -1,0 +1,156 @@
+.about_container{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 32px;
+    margin: 20px;
+    justify-content: center;
+    border: none;
+    background-color: white;
+
+    .main{
+     width: 100%;
+     overflow: hidden;
+     margin-bottom: 20px;
+    }
+
+    .others{
+      overflow: hidden;
+      max-width: 1200px;
+     
+
+      p{
+        margin-bottom: 0;
+        
+        
+      }
+  
+    }
+
+    .about_title{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .about_text{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .about_dev_skills{
+        font-size: 20px;
+        margin-bottom: 30px;
+
+    }
+
+    .other_dev_skills{
+        font-size: 20px;
+        margin-bottom: 30px;
+
+    }
+
+    .overlay{
+        margin:10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .other_overlay{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+
+    .about_dev_logos{
+        
+        .column{
+            float: left;
+            width: 14.2%;
+            padding: 10px;
+            justify-content: center;
+            max-width: 150px;
+
+
+  
+    
+            img{   
+                width:80%;
+                margin: auto;
+                height: auto;
+            }
+    
+            .text{
+                margin-top: 20px;
+            }
+        }
+
+
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .about_container{
+        .about_dev_logos{
+            .column{
+                width: 20%;
+            }
+        }
+
+        .others{
+            justify-content: center;
+            align-items: center;
+          
+        }
+    
+        .other_overlay{
+            display: contents;
+            align-items: center;
+            float: none;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .about_container{
+        .about_dev_logos{
+            .column{
+                width: 30%;
+            }
+        }
+
+
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+    .about_container{
+        .about_dev_logos{
+            .column{
+                width: 40%;
+    
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 300px) {
+    .about_container{
+        .about_dev_logos{
+            .column{
+                width: 100%;
+            }
+
+            .overlay{
+                justify-content: left;
+            }
+
+            img{   
+                width:60%;
+                height: 70px;
+            }
+        }
+    }
+  }

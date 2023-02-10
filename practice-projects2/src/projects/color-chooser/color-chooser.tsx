@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './color-chooser.scss'
+import { Button } from 'semantic-ui-react'
 
 const ColorChooser = () => {
     const digits =  [
@@ -44,9 +45,11 @@ const ColorChooser = () => {
 
     return (
         <div className="container">
+            <h2>Color Chooser App</h2>
+            <p>You can see a color in a square. Your task is to find out what's the color's hexadecimal value from the three possible answers.</p>
             <div className="square" style={{backgroundColor: `${color}`}}></div>
             {answers.map(answer => 
-                <button key={answer} onClick={() => buttonClickHandler(answer)} value={answer}>{answer}</button>)}
+                <button className="ui teal button" key={answer} onClick={() => buttonClickHandler(answer)} value={answer}>{answer}</button>)}
                 {result === Result.Correct &&<p>Correct!</p>}
                 {result === Result.Wrong &&<p>Wrong answer!</p>}
         </div>

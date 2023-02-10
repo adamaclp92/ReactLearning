@@ -1,8 +1,17 @@
+  body{
+    font-family: 'Playfair Display', serif !important;
+    color: rgb(107, 107, 107);
+    text-shadow:1px 1px 2px grey;
+    text-align: center;
+    background: linear-gradient(90deg, #bdc3c7 0%, #2c3e50 100%) !important;
+  }
 
   .lang{
     position: absolute;
     overflow: hidden;
     margin: 10px;
+    cursor: pointer;
+    background-color: transparent;
     .dropdown {
         position: relative;
         left: 0;
@@ -13,12 +22,13 @@
     }
 
     &:hover{
+      
       .dropdown{
         display: flex;
         flex-direction: column;
         align-items: center;
         li{
-          margin-top: 5px;
+          margin-top: 8px;
           width: 30px;
           height:  auto;
           display: block;
@@ -29,16 +39,61 @@
     } 
 
     .imageContainer{
+      background-color: none;
       width: 30px;
       height:  auto;
       border-radius: 50%;
       overflow: hidden;
+
+      &:hover{
+        animation: bump 300ms ease-out;
+
+        @keyframes bump {
+          0% {
+            transform: scale(1);
+          }
+          10% {
+            transform: scale(1.2);
+          }
+          30% {
+            transform: scale(1.5);
+          }
+          50% {
+            transform: scale(1.2);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+      }
     }
   
   }
 
   
+.alternativeLanguage{
+  &:hover{
+  animation: bump 300ms ease-out;
 
+  @keyframes bump {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(1.2);
+    }
+    30% {
+      transform: scale(1.5);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+}
   
 
 

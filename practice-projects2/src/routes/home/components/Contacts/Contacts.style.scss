@@ -1,0 +1,48 @@
+.footer_container{
+    padding-top: 20px;
+    height: 200px;
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+    .first_item{
+        display: block;
+        padding: 14px 16px;
+        float: left;
+    }
+
+
+    .column{
+       overflow: auto;
+       display: flex;
+       margin: auto;
+       justify-content: space-around;
+    }
+
+    .row{
+        float: left;
+        padding: 10px;
+        margin: 10px;
+
+        li{
+            float: none;
+            text-align: center;
+        
+        .email{
+            padding: 14px 16px;
+        }
+
+        }
+        
+    }
+
+    .last_item{
+    
+        padding: 14px 16px;
+        text-align: center;
+        float: none;
+    }
+}
+
+
+
+

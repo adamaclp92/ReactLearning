@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Container } from "semantic-ui-react";
+
+import './synonym-api.style.scss'
 
 enum OrderToFind {
   syn = "Synonyms - Szinonímák",
@@ -49,11 +52,15 @@ const SynonymApi = () => {
   };
 
   return (
-    <React.Fragment>
-      <form onSubmit={getSynonymHandler} className="form-container">
-        <div className="input-container">
-          <label htmlFor="synonym-type">Choose a type:</label>
-          <select id="synonym-type" name="synonym-type" onChange={selectInputChangeHandler}>
+    <Container className="synonym_form">
+      <h2>Synonym API</h2>
+      <p>https://api.datamuse.com/ In this link there is an API, which store words and their synonyms, rhymes etc.
+        You can choose a type and then write a word and see the result!
+      </p>
+      <form onSubmit={getSynonymHandler} className="ui form">
+        <div className="field synonym_field">
+          <label htmlFor="synonym_type">Choose a type:</label>
+          <select id="synonym_type" name="synonym_type" onChange={selectInputChangeHandler}>
               {Object.values(OrderToFind).map((order: OrderToFind)=> 
                 <option
                     aria-selected="true"
@@ -64,19 +71,19 @@ const SynonymApi = () => {
                 )}
           </select>
         </div>
-        <div className="input-container">
+        <div className="field synonym_field">
           <label>Write a word, and I give the synonyms:</label>
           <input type="text" value={inputField} onChange={inputChangeHandler} />
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="ui button blue">Submit</button>
       </form>
-      <ul>
+      <div className="field synonym_field">
         {synonymArray.map((item) => (
           <li key={item.word}>{item.word}</li>
         ))}
-      </ul>
-    </React.Fragment>
+      </div>
+    </Container>
   );
 };
 

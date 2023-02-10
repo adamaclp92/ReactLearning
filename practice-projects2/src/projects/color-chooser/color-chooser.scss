@@ -1,11 +1,13 @@
 .container{
-    display: flex;
     justify-content: center;
+    padding: 50px;
 
     .square{
         width: 150px;
         height: 120px;
         border: 1px solid black;
-        margin: 20px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }

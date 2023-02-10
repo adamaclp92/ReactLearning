@@ -1,10 +1,9 @@
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     overflow: hidden;
     background-color: #333;
-
 
     li{
     
@@ -18,16 +17,28 @@ ul {
             text-decoration: none;
         }
 
-        :hover{
-            background-color: #111;
-        }
+    }
+
+    .nav_title{
+      float: left;
+      color: white;
+      margin-left: 10rem;
+      
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 750px) {
+    ul {
     li {
    
         float: none;
         width: 100%;
     }
+
+    .nav_title{
+     margin-left: 0rem;
+     margin-bottom: 1rem; 
+      
+    }
   }
+}
